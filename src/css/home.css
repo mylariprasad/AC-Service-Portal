@@ -1,0 +1,32 @@
+.home {
+  display: flex;
+  padding-top: 20px;
+
+  .homeContainer {
+    flex: 3; /* Adjust the flex value to change the width */
+
+    .widgets,
+    .charts {
+      display: flex;
+      padding: 5px;
+      gap: 5px;
+    }
+
+    .charts {
+      padding: 1px 5px;
+    }
+
+    .listContainer {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 5px;
+      margin: 5px;
+
+      .listTitle {
+        font-weight: 500;
+        color: gray;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
