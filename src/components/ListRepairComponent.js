@@ -56,19 +56,23 @@ const ListRepairComponent = () => {
       </Link>
 
       <div className="col-md-12 mt-3 mb-3">
-        <button className="btn btn-info">Search Repair</button>
-        <div className="col-md-6">
+        <div className="input-group">
           <input
             type="text"
             name="name"
             value={query}
-            className="form-control"
+            style={{ width: '1000px', height: '40px', fontSize: '14px' }} 
             onChange={handleSearch}
             placeholder="Search..."
           />
+          <div className="input-group-append">
+            <button className="btn btn-info" onClick={getAllRepairs}>
+              Search
+            </button>
+          </div>
         </div>
       </div>
-
+          
       <table className="table table-bordered table-striped">
         <thead>
           <tr>

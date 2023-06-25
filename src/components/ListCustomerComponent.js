@@ -57,12 +57,24 @@ const ListCustomerComponent = () => {
       <Link to ="/add-customer" className="btn btn-primary mb-2">Add Customer</Link>
       <React.Fragment>              
          
-      <div className='col-md-12 mt-3 mb-3'>
-              <h3 className='mb-3'>Search record Datatable </h3>                
-                <div className="col-md-6">                
-                <input  type="text" name='name' value={query}   className="form-control" onChange={(e)=>handlesearch(e)} placeholder='Search...' />
-              </div>          
-            </div>
+      <div className="col-md-12 mt-3 mb-3">
+        <div className="input-group">
+          <input
+            type="text"
+            name="name"
+            value={query}
+            style={{ width: '1000px', height: '40px', fontSize: '14px' }} 
+            onChange={handlesearch}
+            placeholder="Search..."
+          />
+          <div className="input-group-append">
+            <button className="btn btn-info" onClick={getAllCustomers}>
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+          
           
 
         </React.Fragment>

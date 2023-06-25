@@ -61,7 +61,7 @@ const FooterComponent = () => {
                 <hr className='bg-black'></hr>
                 <span>Address : -</span> <span>Salt Lake Sector V (Kolkata)</span><br></br>
                 <a href="tel:+9330379535 tel:+669875"><i className='fas fa-phone'></i> +91-9330379535   <i className='fas fa-phone'></i> +91-9749002205 </a><br></br>
-                // eslint-disable-next-line 
+                
                 <a href="#"><i className='fas fa-envelope'></i>  mdshoelhossain649@gmail.com <br/><i className='fas fa-envelope'></i>  amilohit.1999@gmail.com</a>
 
               </div>

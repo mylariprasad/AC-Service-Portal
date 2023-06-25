@@ -12,6 +12,8 @@ import AdminMainPage from './components/AdminMainPage';
 import Home from './pages/home/Home.js'
 import AddCustomerComponent from './components/AddCustomerComponent';
 import ListCustomerComponent from './components/ListCustomerComponent';
+import ListDeviceComponent from './components/ListDeviceComponent';
+import AddDeviceComponent from './components/AddDeviceComponent';
 
 function App() {
   return (
@@ -33,6 +35,10 @@ function App() {
       <Route path = "/customers" element = {<ListCustomerComponent/>}></Route>
       <Route path = "/add-customer" element = {<AddCustomerComponent/>} ></Route>
       <Route path="/edit-customer/:id" element={<AddCustomerComponent/>}></Route>
+      <Route path = "/devices" element = {<ListDeviceComponent/>}></Route>
+      <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
+      <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
+      
       </Routes>
     
  
