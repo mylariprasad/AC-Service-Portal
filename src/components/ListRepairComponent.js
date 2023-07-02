@@ -90,8 +90,8 @@ const ListRepairComponent = () => {
             <tr key={repair.id}>
               <td>{repair.id}</td>
               <td>{repair.repName}</td>
-              <td>{repair.custId}</td>
-              <td>{repair.deviceId}</td>
+              <td>{repair.customer.id}</td>
+              <td>{repair.device.map((device) => device.id).join(", ")}</td>
               <td width="20%">{repair.des}</td>
               <td>{repair.status}</td>
               <td>

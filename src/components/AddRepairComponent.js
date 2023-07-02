@@ -14,7 +14,9 @@ const AddRepairComponent = () => {
 
   const saveRepair = (e) => {
     e.preventDefault();
-    const repair = { repName, custId, deviceId, des, status };
+    const customer = { id: custId };
+    const devices = deviceId.split(',').map((id) => ({ id: id.trim() }));
+    const repair = { repName, customer, device:devices.map((device) => ({ id: device.id })), des, status };
     if (id) {
       RepairService.updateRepair(id, repair)
         .then((response) => {
@@ -40,8 +42,8 @@ const AddRepairComponent = () => {
       RepairService.getRepairById(id)
         .then((response) => {
           setRepName(response.data.repName);
-          setCustId(response.data.custId);
-          setDeviceId(response.data.deviceId);
+          setCustId(response.data.customer.id);
+          setDeviceId(response.data.devices.map((device) => device.id).join(', '));
           setDes(response.data.des);
           setStatus(response.data.status);
         })
