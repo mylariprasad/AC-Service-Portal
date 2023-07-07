@@ -7,11 +7,12 @@ const ListCustomerComponent = () => {
     const [customers,setCustomers]=useState([])
     useEffect(()=>{
       getAllCustomers();
-      getUserdata();
+    
     },[])
     const getAllCustomers=()=>{
         CustomerService.getAllCustomers().then((response)=>{
-            setCustomers(response.data)  
+            setCustomers(response.data) 
+            setFilterdata(response.data) 
             console.log(response.data);
            }).catch(error=>{
             console.log(error);
@@ -32,14 +33,7 @@ const ListCustomerComponent = () => {
     
      const [filterdata, setFilterdata]= useState([]);
      const [query, setQuery] = useState('');
-     const getUserdata= async()=>{
-        const reqData= await fetch("http://localhost:8080/api/v1/customers");
-        const resData= await reqData.json();
-        //console.log(resData);
-        setCustomers(resData);
-        setFilterdata(resData);
-  
-      }
+    
       const handlesearch=(event)=>{
         const getSearch= event.target.value; 
         if(getSearch.length > 0)

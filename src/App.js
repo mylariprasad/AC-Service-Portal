@@ -7,7 +7,7 @@ import ListEmployeeComponent from './components/ListEmployeeComponent'
 import AddEmployeeComponent from './components/AddEmployeeComponent';
 import ListRepairComponent from './components/ListRepairComponent';
 import AddRepairComponent from './components/AddRepairComponent';
-import Sidebar from './components/Sidebar';
+
 import AdminMainPage from './components/AdminMainPage';
 import Home from './pages/home/Home.js'
 import AddCustomerComponent from './components/AddCustomerComponent';
@@ -20,10 +20,10 @@ function App() {
    <div>
     <Router>
     <HeaderComponent/>
-    <Sidebar></Sidebar>
+    
     <Routes>
-    <Route path="/" element={<Home/>}> 
-      </Route>
+       {/*<Route path="/" element={<Home/>}> </Route>*/}
+      
       <Route  path = "/" element = {<Home/>}></Route>
       <Route path="/admin" element={<AdminMainPage/>}></Route>
       <Route path = "/employees" element = {<ListEmployeeComponent/>}></Route>
