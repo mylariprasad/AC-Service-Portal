@@ -7,13 +7,14 @@ import ListEmployeeComponent from './components/ListEmployeeComponent'
 import AddEmployeeComponent from './components/AddEmployeeComponent';
 import ListRepairComponent from './components/ListRepairComponent';
 import AddRepairComponent from './components/AddRepairComponent';
-
 import AdminMainPage from './components/AdminMainPage';
 import Home from './pages/home/Home.js'
 import AddCustomerComponent from './components/AddCustomerComponent';
 import ListCustomerComponent from './components/ListCustomerComponent';
 import ListDeviceComponent from './components/ListDeviceComponent';
 import AddDeviceComponent from './components/AddDeviceComponent';
+import Customer_bking_rendered from './components/CustomerBooking/Customer_bking_rendered';
+
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       <Route path = "/devices" element = {<ListDeviceComponent/>}></Route>
       <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
       <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
-      
+      <Route path="/Customer_bking_rendered" element={<Customer_bking_rendered/>}></Route>
+
       </Routes>
     
  
