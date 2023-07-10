@@ -8,10 +8,10 @@ export default function MenuContent() {
         <ListGroupItem tag="a" href='/' action>
             Home
         </ListGroupItem>
-        <ListGroupItem tag="a" href='request-Form' action>
+        <ListGroupItem tag="a" href='add-repair' action>
             Service Booking Form
         </ListGroupItem>
-        <ListGroupItem tag="a" href='Complaint-Form' action>
+        <ListGroupItem tag="a" href='ComplainForm' action>
             Complaint Form
         </ListGroupItem>
         <ListGroupItem tag="a" href='Contact' action>

@@ -3,8 +3,8 @@ import React from 'react';
 import NavBar from './NavBar';
 import {Container, Row, Col} from "reactstrap";
 import MenuContent from './MenuContent';
-import RequetForm from './RequetForm';
-
+import ComplainForm from './ComplainForm';
+import Custmr_card from './Custmr_card';
 
 export default function Customer_bking_rendered() {
 
@@ -14,10 +14,10 @@ export default function Customer_bking_rendered() {
       <Container className='my-3'>
         <Row>
           <Col md={4}>
-          <MenuContent></MenuContent>
+          <Custmr_card></Custmr_card>
           </Col>
           <Col md={8}>
-          <RequetForm></RequetForm>
+          <MenuContent></MenuContent>
           </Col>
         </Row>
       </Container>

@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Customer Booking</a>
+  <a class="navbar-brand" href="#">Customer's Portal</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,7 +17,7 @@ export default function NavBar() {
       
 
     </ul>
-      <button class="btn btn-primary my-2 my-sm-0" >LogOut</button>
+      {/*<button class="btn btn-primary my-2 my-sm-0" >LogOut</button>*/}
   </div>
 </nav>
     </div>

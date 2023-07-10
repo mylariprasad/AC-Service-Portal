@@ -1,7 +1,7 @@
 import React from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 
-export default function RequetForm() {
+export default function ComplainForm() {
 
     function SaveButton(){
         toast.success("Successfully Submited");
@@ -14,7 +14,9 @@ export default function RequetForm() {
         <ToastContainer theme="light" autoClose={2500}/>
         <form className='container'>
             <div className="form-group">
-                <label>Enter Full Name</label> <input type="text" className="form-control" name="name" />
+                     <h2> Lodge your grievances and complaints   </h2>
+                     <br/>
+            <label>Enter Full Name</label> <input type="text" className="form-control" name="name" />
             </div>
 
             <div className="form-group">

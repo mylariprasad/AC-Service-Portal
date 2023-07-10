@@ -14,6 +14,7 @@ import ListCustomerComponent from './components/ListCustomerComponent';
 import ListDeviceComponent from './components/ListDeviceComponent';
 import AddDeviceComponent from './components/AddDeviceComponent';
 import Customer_bking_rendered from './components/CustomerBooking/Customer_bking_rendered';
+import ComplainForm from './components/CustomerBooking/ComplainForm';
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
       <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
       <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
       <Route path="/Customer_bking_rendered" element={<Customer_bking_rendered/>}></Route>
-
+      <Route path="/ComplainForm" element={<ComplainForm/>}></Route>
       </Routes>
     
  
