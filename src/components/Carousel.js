@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../css/Carousel.css';
+import HeaderComponent from './HeaderComponent';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,7 +15,9 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="carousel">
+    <>
+     <HeaderComponent/>
+    <div className="carousel my-5">
       <button className="carousel__button" onClick={handlePrevious}>
         &lt;
       </button>
@@ -30,6 +33,7 @@ const Carousel = ({ images }) => {
         &gt;
       </button>
     </div>
+</>
   );
 };
 

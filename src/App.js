@@ -2,7 +2,7 @@
 import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import FooterComponent from './components/FooterComponent';
-import HeaderComponent from './components/HeaderComponent';
+// import HeaderComponent from './components/HeaderComponent';
 import ListEmployeeComponent from './components/ListEmployeeComponent'
 import AddEmployeeComponent from './components/AddEmployeeComponent';
 import ListRepairComponent from './components/ListRepairComponent';
@@ -16,13 +16,11 @@ import AddDeviceComponent from './components/AddDeviceComponent';
 import Customer_bking_rendered from './components/CustomerBooking/Customer_bking_rendered';
 import ComplainForm from './components/CustomerBooking/ComplainForm';
 
-
 function App() {
   return (
    <div>
     <Router>
-    <HeaderComponent/>
-    
+    {/* <HeaderComponent/> */}
     <Routes>
        {/*<Route path="/" element={<Home/>}> </Route>*/}
       

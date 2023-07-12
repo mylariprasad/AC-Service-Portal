@@ -13,7 +13,7 @@ export default function Customer_bking_rendered() {
       <NavBar></NavBar>
       <Container className='my-3'>
         <Row>
-          <Col md={4}>
+          <Col md={2}>
           <Custmr_card></Custmr_card>
           </Col>
           <Col md={8}>
