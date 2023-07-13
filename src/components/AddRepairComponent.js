@@ -59,11 +59,11 @@ const AddRepairComponent = () => {
   return (
     <div>
       <br />
-      <div className="container">
+      <div className="repair">
         <div className="row">
-          <div className="card col-md-8 offset-md-3 offset-md-3">
+          <div className=" col-md-8 offset-md-3 offset-md-3">
             <h1 className="text-center">{title}</h1>
-            <div className="card-body-md-8">
+            <div className="body-md-8">
               <form>
                 <div className="form-group mb-2">
                 
