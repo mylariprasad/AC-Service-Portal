@@ -11,16 +11,18 @@ export default function Customer_bking_rendered() {
   return (
     <div>
       <NavBar></NavBar>
-      <Container className='my-3'>
+      <div className='my-3'>
         <Row>
-          <Col md={2}>
-          <Custmr_card></Custmr_card>
+          <Col md={4}>
+            <div className="container">
+              <Custmr_card></Custmr_card>
+            </div>
           </Col>
           <Col md={8}>
           <MenuContent></MenuContent>
           </Col>
         </Row>
-      </Container>
+      </div>
 
     </div>
   )
