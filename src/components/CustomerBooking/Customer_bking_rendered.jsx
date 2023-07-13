@@ -8,6 +8,7 @@ import Custmr_card from './Custmr_card';
 
 export default function Customer_bking_rendered() {
 
+  
   return (
     <div>
       <NavBar></NavBar>
