@@ -78,7 +78,7 @@ const ListCustomerComponent = () => {
                 <th>customer Name</th>
                 <th>customer EmailId</th>
                 <th>customer PhoneNumber</th>
-            
+                <th>Actions</th>
             </thead>
             <tbody>
                 {

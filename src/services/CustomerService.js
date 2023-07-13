@@ -19,5 +19,5 @@ class CustomerService{
     }
 
 }
-// eslint-disable-next-line 
+
 export default new CustomerService(); 

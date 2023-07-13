@@ -15,6 +15,12 @@ export default function MenuContent() {
             Complaint Form
         </ListGroupItem>
         <ListGroupItem style={{height:'4rem'}} tag="a" href='Contact' action>
+           View  Device List & corresponding ID
+        </ListGroupItem>
+        <ListGroupItem style={{height:'4rem'}} tag="a" href='About' action>
+            Help -(See steps how to fill up the form !)
+        </ListGroupItem>
+        <ListGroupItem style={{height:'4rem'}} tag="a" href='About' action>
             Contact
         </ListGroupItem>
         <ListGroupItem style={{height:'4rem'}} tag="a" href='About' action>
