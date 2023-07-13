@@ -1,6 +1,6 @@
 import React from 'react'
 import { ToastContainer, toast } from 'react-toastify'
-
+import NavBar from './NavBar';
 export default function ComplainForm() {
 
     function SaveButton(){
@@ -13,7 +13,7 @@ export default function ComplainForm() {
     <div>
         <ToastContainer theme="light" autoClose={2500}/>
         <div>
-
+        <NavBar></NavBar>
         <form className='container'>
             <div className="form-group">
                      <h2 style={{textAlign:'center'}}> Lodge your grievances and complaints   </h2>

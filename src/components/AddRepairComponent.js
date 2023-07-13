@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import RepairService from '../services/RepairService';
+import NavBar from './CustomerBooking/NavBar';
+
 
 const AddRepairComponent = () => {
   const [repName, setRepName] = useState('');
@@ -58,6 +60,7 @@ const AddRepairComponent = () => {
 
   return (
     <div>
+      <NavBar></NavBar>
       <br />
       <div className="repair">
         <div className="row">
