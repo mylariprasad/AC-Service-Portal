@@ -2,30 +2,26 @@
 import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import FooterComponent from './components/FooterComponent';
-import HeaderComponent from './components/HeaderComponent';
+// import HeaderComponent from './components/HeaderComponent';
 import ListEmployeeComponent from './components/ListEmployeeComponent'
 import AddEmployeeComponent from './components/AddEmployeeComponent';
 import ListRepairComponent from './components/ListRepairComponent';
 import AddRepairComponent from './components/AddRepairComponent';
-import Sidebar from './components/Sidebar';
 import AdminMainPage from './components/AdminMainPage';
 import Home from './pages/home/Home.js'
 import AddCustomerComponent from './components/AddCustomerComponent';
 import ListCustomerComponent from './components/ListCustomerComponent';
 import ListDeviceComponent from './components/ListDeviceComponent';
 import AddDeviceComponent from './components/AddDeviceComponent';
-import DeviceItems from './components/DeviceItems';
-import AddOrderComponent from './components/AddOrderComponenet';
 
 function App() {
   return (
    <div>
     <Router>
-    <HeaderComponent/>
-    <Sidebar></Sidebar>
+    {/* <HeaderComponent/> */}
     <Routes>
-    <Route path="/" element={<Home/>}> 
-      </Route>
+       {/*<Route path="/" element={<Home/>}> </Route>*/}
+      
       <Route  path = "/" element = {<Home/>}></Route>
       <Route path="/admin" element={<AdminMainPage/>}></Route>
       <Route path = "/employees" element = {<ListEmployeeComponent/>}></Route>
@@ -41,7 +37,7 @@ function App() {
       <Route path = "/devices" element = {<ListDeviceComponent/>}></Route>
       <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
       <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
-      <Route path="/deviceItems" element={<DeviceItems/>}></Route>
+      
       </Routes>
     <FooterComponent/>
     </Router>

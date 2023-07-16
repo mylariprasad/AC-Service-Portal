@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="welcome-page">    
       <Carousel images={acImages} />
-      <div className="service-box">
+      <div className="service-box my-5">
         <h1>SERVICES AVAILABLE</h1><br></br>
         <div className="row">
         <div className="rectangle">

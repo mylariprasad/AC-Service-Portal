@@ -51,9 +51,9 @@ const ListRepairComponent = () => {
   return (
     <div className="container">
       <h2 className="text-center">Repair Management</h2>
-      <Link to="/add-repair" className="btn btn-primary mb-2">
-        Add Repair
-      </Link>
+      {/*<Link to="/add-repair" className="btn btn-primary mb-2">
+        Book a New Repair Service !
+      </Link>*/}
 
       <div className="col-md-12 mt-3 mb-3">
         <div className="input-group">
