@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const AdminMainPage = () => {
   return (
+    
     <div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '700px' }}>
