@@ -1,0 +1,37 @@
+{
+    "Testimonials": [{
+    "img": "https://as1.ftcdn.net/v2/jpg/00/71/63/98/1000_F_71639854_0LDSa6HiRcK14knhfoIPqlbuHHoz7Say.jpg",
+    "text": "\"The AC repair service provided by XYZ Company was excellent. They were prompt, professional, and fixed my AC issue efficiently. I highly recommend their services!\"",
+    "name": "John Doe"
+},
+{
+    "img": "https://images.unsplash.com/photo-1520529277867-dbf8c5e0b340?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80",
+    "text": "I had a great experience with XYZ Company. Their technician arrived on time, diagnosed the problem quickly, and repaired my AC unit effectively. I'm impressed with their quality work",
+    "name": "Sarah M"
+},
+{
+    "img": "https://upload.wikimedia.org/wikipedia/commons/3/32/Passport_Size_Image_of_Nouman.jpg",
+    "text": "I called XYZ Company for an emergency AC repair, and they exceeded my expectations. Their team arrived within an hour and resolved the issue promptly.",
+    "name": "Raman V"
+},
+{
+    "img": "https://images.unsplash.com/photo-1616002411355-49593fd89721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+    "text": "I highly recommend XYZ Company for AC repairs. Their team was professional, courteous, and went above and beyond to ensure my AC was working perfectly.",
+    "name": "Jennifer A"
+},
+{
+    "img": "https://as2.ftcdn.net/v2/jpg/02/90/27/39/1000_F_290273933_ukYZjDv8nqgpOBcBUo5CQyFcxAzYlZRW.jpg",
+    "text": "I had a wonderful experience with XYZ Company's AC repair service. Their team was friendly, knowledgeable, and took the time to explain the problem and the repair process.",
+    "name": "Vamshi R"
+},
+{
+    "img": "https://as1.ftcdn.net/v2/jpg/03/31/63/82/1000_F_331638217_BsSy1TcziNymxOBAMGO6Zrc4hge5yQWz.jpg",
+    "text": "XYZ Company provided exceptional AC repair service. Their technician arrived on time, diagnosed the issue accurately, and fixed it efficiently. ",
+    "name": "Carey K"
+}
+],
+
+"About": {
+    "paragraph": "XYZ AC Repair is a seasoned provider of top-quality AC repair services. With experienced technicians and a customer-centric approach, we prioritize excellence and satisfaction. Our knowledgeable and friendly employees deliver efficient solutions, diagnosing and resolving AC issues promptly. We value transparency, ensuring clear communication and affordable pricing options. In addition to repairs, we offer preventive maintenance services to optimize your AC system's performance. Trust us for reliable solutions and a comfortable environment. Contact XYZ AC Repair today for all your AC repair needs."
+}
+}

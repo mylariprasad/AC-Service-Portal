@@ -51,7 +51,6 @@ const ListDeviceComponent = () => {
       
         <Link to ="/add-device" className='btn btn-primary mb-2'>Add Device</Link>
         <React.Fragment>              
-         
         <div className="col-md-12 mt-3 mb-3">
         <div className="input-group">
           <input
@@ -69,9 +68,6 @@ const ListDeviceComponent = () => {
           </div>
         </div>
       </div>
-          
-          
-
         </React.Fragment>
         <table className="table table-bordered table-striped">
             <thead>

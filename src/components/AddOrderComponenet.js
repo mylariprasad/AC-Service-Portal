@@ -1,33 +1,62 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import DeviceService from '../services/DeviceService';
+import CustomerService from '../services/CustomerService';
 import RepairService from '../services/RepairService';
 
-
-const AddRepairComponent = () => {
+const AddOrderComponent = () => {
+  const [customerId, setCustomerId] = useState('');
   const [repName, setRepName] = useState('');
-  const [custId, setCustId] = useState('');
-  const [deviceId, setDeviceId] = useState('');
+  const [device, setDevice] = useState(null);
+  const [customer, setCustomer] = useState(null);
   const [des, setDes] = useState('');
   const [status, setStatus] = useState('');
-
+  const [custId, setCustId] = useState('');
+  const [deviceId, setDeviceId] = useState('');
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { customerId: selectedCustomerId, deviceId: selectedDeviceId } = useParams();
+
+  useEffect(() => {
+    if (selectedCustomerId) {
+      fetchCustomerData(selectedCustomerId);
+    }
+    if (selectedDeviceId) {
+      fetchDeviceData(selectedDeviceId);
+    }
+  }, [selectedCustomerId, selectedDeviceId]);
+
+  const fetchCustomerData = async (customerId) => {
+    try {
+      const response = await CustomerService.getCustomerById(customerId);
+      setCustomer(response.data);
+      setCustomerId(response.data.id);
+      setCustId(response.data.id);
+    } catch (error) {
+      console.error('Error fetching customer:', error);
+    }
+  };
+
+  const fetchDeviceData = async (deviceId) => {
+    try {
+      const response = await DeviceService.getDeviceById(deviceId);
+      setDevice(response.data);
+      setDeviceId(response.data.id);
+    } catch (error) {
+      console.error('Error fetching device:', error);
+    }
+  };
 
   const saveRepair = (e) => {
     e.preventDefault();
+    
     const customer = { id: custId };
-    const devices = deviceId.split(',').map((id) => ({ id: id.trim() }));
-    const repair = { repName, customer, device:devices.map((device) => ({ id: device.id })), des, status };
-    if (id) {
-      RepairService.updateRepair(id, repair)
-        .then((response) => {
-          navigate('/repairs');
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    } else {
-      RepairService.createRepair(repair)
+    const devices = [{ id: deviceId }];
+    
+    const repair = { repName, customer, devices, des, status };
+    
+    // Implement your logic to save the order
+    console.log('Order:', repair);
+    RepairService.createRepair(repair)
         .then((response) => {
           console.log(response.data);
           navigate('/repairs');
@@ -35,38 +64,17 @@ const AddRepairComponent = () => {
         .catch((error) => {
           console.log(error);
         });
-    }
   };
-
-  useEffect(() => {
-    if (id) {
-      RepairService.getRepairById(id)
-        .then((response) => {
-          setRepName(response.data.repName);
-          setCustId(response.data.customer.id);
-          setDeviceId(response.data.devices.map((device) => device.id).join(', '));
-          setDes(response.data.des);
-          setStatus(response.data.status);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const title = id ? 'Update Repair' : 'Add Repair';
 
   return (
     <div>
-      <br />
+      <h2 className="text-center">Add Order</h2>
       <div className="container">
         <div className="row">
-          <div className="card col-md-6 offset-md-3 offset-md-3">
-            <h2 className="text-center">{title}</h2>
+          <div className="card col-md-6 offset-md-3">
             <div className="card-body">
               <form>
-                <div className="form-group mb-2">
+              <div className="form-group mb-2">
                   <label className="form-label">Repair Name:</label>
                   <input
                     type="text"
@@ -79,26 +87,24 @@ const AddRepairComponent = () => {
                   />
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label">Customer ID:</label>
+                  <label className="form-label">Customer Id:</label>
                   <input
                     type="text"
-                    placeholder="Enter customer ID"
-                    name="custId"
+                    placeholder="Enter status"
                     className="form-control"
                     value={custId}
-                    onChange={(e) => setCustId(e.target.value)}
+                    readOnly 
                     required
                   />
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label">Device ID:</label>
+                  <label className="form-label">Device Id:</label>
                   <input
                     type="text"
-                    placeholder="Enter device ID"
-                    name="deviceId"
+                    placeholder="Enter status"
                     className="form-control"
                     value={deviceId}
-                    onChange={(e) => setDeviceId(e.target.value)}
+                    readOnly
                     required
                   />
                 </div>
@@ -119,23 +125,16 @@ const AddRepairComponent = () => {
                   <input
                     type="text"
                     placeholder="Enter status"
-                    list="browsers" name="myStatus"
                     className="form-control"
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
+                    value="Not Ordered yet" 
+                    readOnly 
                     required
                   />
-                  <datalist id="browsers">
-                  <option value="In Progress"/>
-                  <option value="Completed"/>
-                  <option value="Hold"/>
-                  <option value="Cancelled"/>
-                </datalist>
                 </div>
                 <button className="btn btn-success" onClick={saveRepair}>
                   Submit
                 </button>
-                <Link to="/repairs" className="btn btn-danger">
+                <Link to="/orders" className="btn btn-danger">
                   Cancel
                 </Link>
               </form>
@@ -147,4 +146,4 @@ const AddRepairComponent = () => {
   );
 };
 
-export default AddRepairComponent;
+export default AddOrderComponent;

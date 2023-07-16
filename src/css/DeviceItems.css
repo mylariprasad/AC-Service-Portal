@@ -1,0 +1,18 @@
+.card-body {
+    font-size: 14px;
+  }
+  
+.card-body .a-price-symbol {
+font-size: 12px;
+}
+  
+.card-body .a-price-whole {
+font-size: 25px;
+color: black;
+font-weight: bold;
+}
+
+.card-body .a-text-normal {
+    font-size: 15px;
+}
+

@@ -14,6 +14,8 @@ import AddCustomerComponent from './components/AddCustomerComponent';
 import ListCustomerComponent from './components/ListCustomerComponent';
 import ListDeviceComponent from './components/ListDeviceComponent';
 import AddDeviceComponent from './components/AddDeviceComponent';
+import DeviceItems from './components/DeviceItems';
+import AddOrderComponent from './components/AddOrderComponenet';
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
       <Route path="/edit-employee/:id" element={<AddEmployeeComponent/>}></Route>
       <Route path = "/repairs" element = {<ListRepairComponent/>}></Route>
       <Route path = "/add-repair" element = {<AddRepairComponent/>} ></Route>
+      <Route path="/addorder/:customerId/:deviceId" element={<AddOrderComponent/>}></Route>
       <Route path="/edit-repair/:id" element={<AddRepairComponent/>}></Route>
       <Route path = "/customers" element = {<ListCustomerComponent/>}></Route>
       <Route path = "/add-customer" element = {<AddCustomerComponent/>} ></Route>
@@ -38,10 +41,8 @@ function App() {
       <Route path = "/devices" element = {<ListDeviceComponent/>}></Route>
       <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
       <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
-      
+      <Route path="/deviceItems" element={<DeviceItems/>}></Route>
       </Routes>
-    
- 
     <FooterComponent/>
     </Router>
    </div>
