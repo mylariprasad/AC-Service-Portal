@@ -7,7 +7,7 @@ export default props => {
   return (
     <Menu>
     <h3>Login as</h3>
-    <Link className="menu-item" to={`/Customer_bking_rendered`}>
+    <Link className="menu-item" to={`/login`}>
         Customer
       </Link>
 
@@ -15,7 +15,7 @@ export default props => {
         Employee
       </a>
 
-      <Link className="menu-item" to={`/admin`}>
+      <Link className="menu-item" to={`/Admin_login`}>
         Service provider(Admin)
       </Link>
       
