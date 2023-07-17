@@ -23,7 +23,7 @@ export default function MenuContent() {
         <ListGroupItem style={{height:'4rem'}} tag="a" href='Contact' action>
             Contact
         </ListGroupItem>
-        <ListGroupItem style={{height:'4rem'}} tag="a" href='About' action>
+        <ListGroupItem style={{height:'4rem'}} tag="a" href='CustomerAbout' action>
             About
         </ListGroupItem>
       </ListGroup>
