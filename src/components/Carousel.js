@@ -35,7 +35,7 @@ const Carousel = ({ images }) => {
           </button>
         </div>
         <div className="comtainer my-5">
-          <FooterComponent/>
+          
         </div>
 </>
   );

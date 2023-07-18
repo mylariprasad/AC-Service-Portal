@@ -12,7 +12,7 @@ import AboutUs from './AboutUs.jpg'
 import img from './img.jpg'
 import testimonial3 from './testimonial3.jpg'
 import { BsFillPeopleFill } from 'react-icons/bs';
-
+import FooterComponent from '../../components/FooterComponent';
 
 const Home = () => {
 
@@ -177,6 +177,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      
+      <FooterComponent/>
     </div>
   );
 };
