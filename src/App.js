@@ -19,6 +19,7 @@ import Customer_bking_rendered from './components/CustomerBooking/Customer_bking
 import Register from "./components/Login_register/Register";
 import Login from "./components/Login_register/Login";
 import Admin_Login from "./components/Login_register/Admin_Login";
+import AboutUs from './components/AboutUs';
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
       <Route path="/Customer_bking_rendered" element={<Customer_bking_rendered/>}></Route>
       <Route path="/ComplainForm" element={<ComplainForm/>}></Route>
       <Route path="/CustomerAbout" element={<CustomerAbout/>}></Route>
-
+      <Route path="/AboutUs" element= { <AboutUs/>}  />
       <Route path="/register" element= { <Register/>}  /> 
       <Route path="/login" element= { <Login/>} />
       <Route path="/Admin_login" element={<Admin_Login/>}></Route>
