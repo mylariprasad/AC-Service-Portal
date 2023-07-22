@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom'
 
 function DeviceItems() {
     return (
-        <div>
-            <div className="container">
+        <div>   
+            <div className="container" style={{width:'80rem'}}>
                 <div className="row">
                     <div className="col-md-3 my-3">
                         <div className="card" style={{ width: '18rem', height:'23rem' }}>
@@ -56,6 +56,7 @@ function DeviceItems() {
                     
                 </div>
             </div>
+            
         </div>
     )
 }

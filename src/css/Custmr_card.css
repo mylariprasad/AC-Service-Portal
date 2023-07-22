@@ -1,0 +1,28 @@
+.card{
+    width: 17rem;
+    height: 23rem;
+}
+.card-img-top{
+    height:12rem;
+    width: 100%;
+}
+.card-body{
+    height: 11rem;
+}
+.card-body {
+    font-size: 14px;
+  }
+  
+.a-price-symbol {
+font-size: 12px;
+}
+  
+.a-price-whole {
+font-size: 25px;
+color: black;
+font-weight: bold;
+}
+
+.a-text-normal {
+    font-size: 15px;
+}

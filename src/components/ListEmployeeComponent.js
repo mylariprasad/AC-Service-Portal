@@ -31,18 +31,24 @@ const ListEmployeeComponent = () => {
     
      const [filterdata, setFilterdata]= useState([]);
      const [query, setQuery] = useState('');
-    
+     const [selectedSearchCriteria, setSelectedSearchCriteria] = useState('name');
       const handlesearch=(event)=>{
         const getSearch= event.target.value; 
         if(getSearch.length > 0)
         {     
-         const searchdata= employees.filter( (item)=> item.name.toLowerCase().includes(getSearch));
+         const searchdata= filterdata.filter( (item)=> item[selectedSearchCriteria].toLowerCase().includes(getSearch));
          setEmployees(searchdata);
         } else {
           setEmployees(filterdata);
         }
         setQuery(getSearch);
       }
+
+      const handleSearchCriteriaChange = (event) => {
+        setSelectedSearchCriteria(event.target.value);
+        setQuery('');
+        setEmployees(filterdata);
+      };
   return (
     <div className='container'>
       <h2 className="text-center">Employee Management</h2>
@@ -50,20 +56,36 @@ const ListEmployeeComponent = () => {
      
       <React.Fragment>                   
       <div className="col-md-12 mt-3 mb-3">
-        <div className="input-group">
+        <div className="input-group" >
           <input
             type="text"
             name="name"
             value={query}
-            style={{ width: '1000px', height: '40px', fontSize: '14px' }} 
+            style={{ width: '500px', height: '40px', fontSize: '14px', marginRight:"300px" }} 
             onChange={handlesearch}
             placeholder="Search..."
           />
           <div className="input-group-append">
+            <button className="btn btn-info btn-dark" onClick={getAllEmployees}>
+              SearchBy:
+            </button> 
+          </div>
+          <select
+              className='form-control'
+              style={{ width: '150px', height: '40px', fontSize: '14px', marginLeft:"20px"}}
+              value={selectedSearchCriteria}
+              onChange={handleSearchCriteriaChange}
+            >
+              <option value='name'>Name</option>
+              <option value='emailId'>Email Id</option>
+              <option value='phn'>Phone Number</option>
+              
+            </select>
+          {/* <div className="input-group-append">
             <button className="btn btn-info" onClick={getAllEmployees}>
               Search
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
           

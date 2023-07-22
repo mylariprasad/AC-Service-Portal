@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import DeviceService from '../services/DeviceService';
 import CustomerService from '../services/CustomerService';
 import RepairService from '../services/RepairService';
+// import img from '../profile.png'
+import { ListGroup, ListGroupItem } from 'reactstrap'
 
 const AddOrderComponent = () => {
   const [customerId, setCustomerId] = useState('');

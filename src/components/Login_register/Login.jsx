@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import {  useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 
@@ -8,8 +8,8 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
-
+  
+    
     async function login(event) {
         event.preventDefault();
         try {
@@ -26,8 +26,20 @@ function Login() {
              } 
              else if(res.data.message === "Login Success")
              { 
-                
-                navigate('/Customer_bking_rendered');
+              const customerEmail = res.data.email;
+              console.log(customerEmail);
+                // Get customer ID using customerEmail
+                axios.get(`http://localhost:8080/customers/email/${customerEmail}`)
+                  .then((response) => {
+                    const customerId = response.data.id;
+                    // Use the customer ID as needed
+                    console.log(customerId);
+                    navigate(`/Customer_bking_rendered/${customerId}`);
+                  })
+                  .catch((error) => {
+                    console.error('Error fetching customer ID:', error);
+                    alert("Error occurred while fetching customer ID");
+                  });
              } 
               else 
              { 

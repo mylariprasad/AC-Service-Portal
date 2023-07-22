@@ -18,7 +18,8 @@ import ComplainForm from './components/CustomerBooking/ComplainForm';
 import Register from "./components/Login_register/Register";
 import Login from "./components/Login_register/Login";
 import Admin_Login from "./components/Login_register/Admin_Login";
-
+import AddOrderComponent from "./components/AddOrderComponenet";
+import DeviceItems from "./components/DeviceItems";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
     <Router>
     {/* <HeaderComponent/> */}
     <Routes>
-       {/<Route path="/" element={<Home/>}> </Route>/}
+       
       
       <Route  path = "/" element = {<Home/>}></Route>
       <Route path="/admin" element={<AdminMainPage/>}></Route>
@@ -36,19 +37,19 @@ function App() {
       <Route path = "/repairs" element = {<ListRepairComponent/>}></Route>
       <Route path = "/add-repair" element = {<AddRepairComponent/>} ></Route>
       <Route path="/edit-repair/:id" element={<AddRepairComponent/>}></Route>
+      <Route path="/addorder/:customerId/:deviceId" element={<AddOrderComponent/>}></Route>
       <Route path = "/customers" element = {<ListCustomerComponent/>}></Route>
       <Route path = "/add-customer" element = {<AddCustomerComponent/>} ></Route>
       <Route path="/edit-customer/:id" element={<AddCustomerComponent/>}></Route>
       <Route path = "/devices" element = {<ListDeviceComponent/>}></Route>
       <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
       <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
-      <Route path="/Customer_bking_rendered" element={<Customer_bking_rendered/>}></Route>
+      <Route path="/Customer_bking_rendered/:id" element={<Customer_bking_rendered/>}></Route>
       <Route path="/ComplainForm" element={<ComplainForm/>}></Route>
-
       <Route path="/register" element= { <Register/>}  /> 
       <Route path="/login" element= { <Login/>} />
       <Route path="/Admin_login" element={<Admin_Login/>}></Route>
-
+      <Route path="/DeviceItems" element={<DeviceItems/>}></Route>
       
       </Routes>
     

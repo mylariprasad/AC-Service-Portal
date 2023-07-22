@@ -7,8 +7,6 @@ const AddEmployeeComponent = () => {
     const[emailId,setEmailId]=useState('')
     const[phn,setPhn]=useState('')
     const[act,SetAct]=useState('')
-    
-    
     const navigate=useNavigate();
     const {id}=useParams();
    
@@ -32,12 +30,9 @@ const AddEmployeeComponent = () => {
             console.log(error)
            
         })
-    
-   
-}
+    }
 }
     useEffect(() => {
-
         EmployeeService.getEmployeeById(id).then((response) =>{
             setName(response.data.name)
             setEmailId(response.data.emailId)
@@ -46,8 +41,8 @@ const AddEmployeeComponent = () => {
         }).catch(error => {
             console.log(error)
         })
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+    
     const title = () => {
 
         if(id){
