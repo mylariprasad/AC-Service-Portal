@@ -1,0 +1,216 @@
+/* AboutUs.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .brands-container {
+    margin: 20px 0;
+  }
+  
+  .brand-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .brand-box {
+    width: calc(25% - 10px); /* 4 boxes per row, 10px margin between boxes */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .brand-box:hover {
+    transform: scale(1.1);
+  }
+  
+  .reasons-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Set a fixed height for the container */
+  overflow: hidden; /* Hide overflowing content */
+  position: relative;
+  }
+  
+  .reason-card {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    left: 0;
+    transform: translateX(0%);
+  }
+  
+  .reason-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .reason-card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Show the description on hover */
+  .reason-card.active p {
+    display: block;
+  }
+  
+  /* Zoom in effect on hover */
+  .reason-card.active {
+    transform: scale(1.1);
+  }
+  
+  .additional-info-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color for the additional info container */
+    border-radius: 8px;
+  }
+  
+  .additional-info-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .additional-info-box p {
+    margin: 5px;
+  }
+  
+  .additional-info-box .circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #007bff; /* Circle background color */
+    color: #fff; /* Circle text color */
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px; /* Spacing between circles */
+  }
+  
+  /* Add any additional styling as needed */
+/* Styling for the circles */
+.circle-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: plum;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .circle span {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  .arrow-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    padding-right: 20px; /* Add some padding to the right side for arrow position */
+  }
+  
+  .arrow-right {
+    position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  color:grey; /* Update the arrow color to a visible color */
+  z-index: 1; 
+  }
+  .d-container {
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  
+  .d-image {
+    flex: 0 0 250px; /* Set a fixed width for the image container */
+    max-width: 100%;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .d-content {
+    flex: 1;
+    margin-right: 30px;
+  }
+  
+  .d-content h2 {
+    margin-top: 0;
+  }
+  .about-us-header {
+    display: flex;
+    align-items: center;
+    background-color: lightblue; /* Choose a suitable background color for the header */
+    color: #fff; /* Choose a suitable text color for the header */
+    padding: 10px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .about-us-heading {
+    margin: 0;
+    font-size: 24px;
+  }

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/topheader.css';
 import Sidebar from './Sidebar';
-
+import { Link } from 'react-router-dom';
 const HeaderComponent = () => {
   return (
     <div className='row top_header'>
@@ -13,7 +13,9 @@ const HeaderComponent = () => {
             </div>
             <div className='col-1 col-md-1 col-xl-1 col-lg-1'>
         <div className="container-Project-item" >
-            <h3> About</h3>
+        <Link className="menu-item" to={`/AboutUs`}>
+        <buton type="button" className="btn btn-primary">About Us</buton>
+      </Link>   
         </div>
       </div>
       <div className='col-1 col-md-1 col-xl-1 col-lg-1'>
