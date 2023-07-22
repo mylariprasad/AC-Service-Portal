@@ -17,7 +17,7 @@ const CustomerSatisfactionChart = () => {
           isAnimationActive={false}
           data={data}
           cx="50%"
-          cy="50%"
+          cy="40%"
           outerRadius={100}
           fill="hotpink"
           label={({ name, value }) => `${name}: ${value}`} // Displaying name and value near the chart

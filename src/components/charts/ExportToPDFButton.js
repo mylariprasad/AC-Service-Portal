@@ -5,8 +5,15 @@ const ExportToPDFButton = ({ containerId }) => {
   const handleExportPDF = () => {
     const element = document.getElementById(containerId);
 
+    
+    const pageWidth = 10 * 92; 
+    const pageHeight = 14 * 72; 
+
     html2pdf()
-      .set({ html2canvas: { scale: 4 } })
+      .set({
+        html2canvas: { scale: 4 }, 
+        jsPDF: { unit: "pt", format: [pageWidth, pageHeight], orientation: "landscape" },
+      })
       .from(element)
       .save("charts.pdf");
   };
