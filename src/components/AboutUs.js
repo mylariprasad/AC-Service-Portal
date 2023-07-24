@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
+import { useEffect } from 'react';
 import '../css/AboutUs.css';
+import { SocialIcon } from 'react-social-icons';
 import about from './about.png';
 const ACBrands = [
   'Voltas', 'LG', 'Hitachi', 'Panasonic',
@@ -30,6 +32,16 @@ const reasonsToChooseUs = [
 ];
 
 const AboutUs = () => {
+
+  useEffect(() => {
+    if (window.location.hash === '#contact') {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
 
   const [activeReasonIndex, setActiveReasonIndex] = useState(0);
 
@@ -100,6 +112,49 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <div  id="contact" className="contact-us-container">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions, need assistance, or want to schedule a service, feel free to contact us.
+        </p>
+        <div className="contact-details">
+          <div className="contact-info">
+            <div className="contact-icon">
+              <i className="fa fa-phone"></i>
+            </div>
+            <div className="contact-text">
+              <p>Phone: +91-9330379535 or +91-9749002205</p>
+            </div>
+          </div>
+          <div className="contact-info">
+            <div className="contact-icon">
+              <i className="fa fa-envelope"></i>
+            </div>
+            <div className="contact-text">
+              <p>Email: info@example.com</p>
+            </div>
+          </div>
+          <div className="contact-info">
+            <div className="contact-icon">
+              <i className="fa fa-map-marker"></i>
+            </div>
+            <div className="contact-text">
+              <p>Address: Salt Lake Sector V (Kolkata)</p>
+            </div>
+          </div>
+        </div>
+        <h>Follow us on :</h><br></br><br></br>
+        <div className="social-media-links">
+            <i className="fab fa-linkedin"></i>
+            LinkedIn  <span style={{ marginLeft: '7px' }}>
+             <SocialIcon url="https://in.linkedin.com/" /></span>
+            <i className="fab fa-facebook"></i>
+            Facebook  <span style={{ marginLeft: '7px' }}>
+            <SocialIcon url="https://facebook.com" /></span>
+            <i className="fab fa-instagram"></i>
+            Instagram <span style={{ marginLeft: '7px' }}><SocialIcon url="https://www.instagram.com/" /></span>
+        </div>
+    </div>
     </div>
   );
 };

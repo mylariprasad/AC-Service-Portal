@@ -20,7 +20,9 @@ const HeaderComponent = () => {
       </div>
       <div className='col-1 col-md-1 col-xl-1 col-lg-1'>
         <div className="container-Project-item" >
-            <h3> Contact</h3>
+        <Link to="/AboutUs#contact"> 
+        <button  type="button" className="btn btn-primary">Contact Us</button>
+        </Link>
         </div>
       </div>
       <div className='col-1 col-md-1 col-xl-1 col-lg-1' >
