@@ -1,0 +1,50 @@
+.App {
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("rlbg.img");
+    background-size:cover;
+	background-repeat:no-repeat;
+}
+
+.auth-form-container, .loginform, .registerform {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    border: 10px;
+}
+
+.heading{
+    color: rgb(0, 0, 0);
+}
+label{
+    text-align: left;
+    padding: 0.15rem 0;
+    color: rgb(0, 0, 0);
+
+}
+
+.input-field{
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-style: solid;
+    border-color: rgb(83, 153, 214);
+    border-radius: 10px;
+    width: 50;
+}
+
+.Link-btn{
+    background: none;
+    color: rgb(0, 137, 155);
+    text-decoration: underline;
+    border: none;
+}
+.main-button{
+    border: none;
+    background-color: rgb(83, 153, 214);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}

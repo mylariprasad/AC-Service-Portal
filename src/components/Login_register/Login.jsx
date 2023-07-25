@@ -1,7 +1,8 @@
-import {  useState, useEffect } from "react";
+import {  useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { Link } from 'react-router-dom'
+import '../../css/LoginRegister.css';
+
 
 function Login() {
    
@@ -58,51 +59,24 @@ function Login() {
       }
 
     return (
-       <div>
-            <div class="container">
-            <div class="row">
-                <h2>Login</h2>
-             <hr/>
-             </div>
-
-             <div class="row">
-             <div class="col-sm-6">
- 
-            <form>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email"  class="form-control" id="email" placeholder="Enter Name"
-          
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-          
-          />
-
-        </div>
-
-        <div class="form-group">
-            <label>password</label>
-            <input type="password"  class="form-control" id="password" placeholder="Enter password"
-            
-            value={password}
-            onChange={(event) => {
-              setPassword(event.target.value);
-            }}
-            
+      <div className="App">
+      <div className="auth-form-container">
+            <h2 className="heading">Login</h2>
+        <form className="loginform">
+            <label htmlFor="email">Email</label> 
+            <input className="input-field" type="email" placeholder="example@gmail.com" id="email" 
+                  value={email} onChange={(e) => setEmail(e.target.value)}
             />
-          </div>
-                  <button type="submit" class="btn btn-primary" onClick={login} >Login</button>
-                  <hr/>
-                  <Link to ="/register" className="btn btn-primary mb-2">Register</Link>
-              </form>
-
-            </div>
-            </div>
-            </div>
-
-     </div>
+            <label htmlFor="password">Password</label>
+            <input className="input-field" type="password" placeholder="********" id="password"
+                  value={password} onChange={(e) => setPassword(e.target.value)}
+            />
+  
+            <button className="main-button" type="submit" onClick={login}>Login</button>
+        </form>
+        <button className="Link-btn" onClick={()=>navigate('/register')}>Don't have account? Register here</button>
+      </div>
+      </div>
     );
   }
   

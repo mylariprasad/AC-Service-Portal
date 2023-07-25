@@ -1,11 +1,14 @@
 import {  useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import '../../css/AdminLogin.css';
 
 function Register() {
   
     const [employeename, setEmployeename] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
 
     async function save(event) {
@@ -24,55 +27,56 @@ function Register() {
       }
   
     return (
-    <div>
-    <div class="container mt-4" >
-    <div class="card">
-            <h1>Registation</h1>
-    
-    <form>
-        <div class="form-group">
-          <label>name</label>
-          <input type="text"  class="form-control" id="employeename" placeholder="Enter Name"
-          
-          value={employeename}
-          onChange={(event) => {
-            setEmployeename(event.target.value);
-          }}
+      <div className="App">
+      <div className="auth-form-container">
+        <h1 className="heading">Registration</h1>
+        <form className="registerform">
+          <label>User Name</label>
+          <input
+            className="input-field"
+            type="text"
+            id="employeename"
+            placeholder="Enter Name"
+            value={employeename}
+            onChange={(event) => {
+             setEmployeename(event.target.value);
+            }}
+            required
           />
 
-        </div>
-
-        <div class="form-group">
-          <label>email</label>
-          <input type="email"  class="form-control" id="email" placeholder="Enter Email"
-          
-          value={email}
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-          
+          <label>Email</label>
+          <input
+            className="input-field"
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+            required
           />
- 
-        </div>
 
-        <div class="form-group">
-            <label>password</label>
-            <input type="password"  class="form-control" id="password" placeholder="Enter password"
-            
+          <label>Password</label>
+          <input
+            className="input-field"
+            type="password"
+            id="password"
+            placeholder="Enter password"
             value={password}
             onChange={(event) => {
               setPassword(event.target.value);
             }}
-            
-            />
-          </div>
+            required
+          />
 
-        <button type="submit" class="btn btn-primary mt-4" onClick={save} >Submit</button>
-       
-      </form>
+          <button className="main-button" type="submit" onClick={save}>Submit</button>
+        </form>
+        <button className="Link-btn" onClick={()=>navigate('/login')}>
+          Already have an account? Login here
+        </button>
+      </div>
     </div>
-    </div>
-     </div>
     );
   }
   
