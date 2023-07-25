@@ -33,15 +33,15 @@ function Custmr_card() {
 
   return (
     <div className="main-container" style={{width:"100vw", marginTop:"30px"}}>
-    <div className="card1" style={{ width: '20%', height: '90vh',backgroundColor: 'grey', borderColor: 'black', display:'inline-block', position: "sticky", top: "30px"}}>
+    <div className="card1" style={{ width: '20%', height: '90vh',backgroundColor: 'lightblue', borderColor: 'red', display:'inline-block', position: "sticky", top: "30px"}}>
       <div className="container">
         <img style={{ height: '5vw', width: '5vw', display:"inline-block" }} src={img} alt="" />
       </div>
       <ListGroup>
-        <ListGroupItem style={{ height: '4rem', backgroundColor: 'grey' }} tag="a" action>{customerName}</ListGroupItem>
-        <ListGroupItem style={{ height: '4rem', backgroundColor: 'grey' }} tag="a" action>Customer ID: {customerId}</ListGroupItem>
-        <ListGroupItem style={{ height: '4rem', backgroundColor: 'grey' }} tag="a" action>Dapibus ac facilisis in</ListGroupItem>
-        <ListGroupItem style={{ height: '4rem', backgroundColor: 'grey' }} tag="a" action>Logout</ListGroupItem>
+        <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Signed in :</ListGroupItem>
+        <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Customer Name: {customerName}</ListGroupItem>
+        <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Customer ID: {customerId}</ListGroupItem>
+        <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action> <a className="menu-item " href="/">Logout</a></ListGroupItem>
       </ListGroup>
     </div>
     <div className="container" style={{width:'80%',display:'inline-block',verticalAlign: "top"}}>

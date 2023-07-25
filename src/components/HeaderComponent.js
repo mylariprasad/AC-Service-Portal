@@ -2,9 +2,12 @@ import React from 'react'
 import '../css/topheader.css';
 import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
+
+
+
 const HeaderComponent = () => {
   return (
-    <div className='row top_header'>
+    <div className='container-fluid fixed-top top_header'>
       <header>
         <nav className='navbar navbar-expand-md'>
             <div style={{textAlign : 'center', height : '50px', width : '110%'}}>
