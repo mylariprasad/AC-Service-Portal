@@ -32,7 +32,7 @@ const AddRepairComponent = () => {
       RepairService.createRepair(repair)
         .then((response) => {
           console.log(response.data);
-          navigate('/repairs');
+          navigate('/');
         })
         .catch((error) => {
           console.log(error);

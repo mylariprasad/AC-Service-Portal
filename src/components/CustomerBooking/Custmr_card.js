@@ -51,8 +51,8 @@ function Custmr_card() {
                             <img src={AC1}  className="card-img-top" alt="AC device" />
                             <div className="card-body">
                                 <h4 class="a-text-normal">Lloyd 1.5 Ton 3 Star Inverter Split AC (5 in 1 Convertible, Copper,2.5 Filter, 2023 Model)</h4>
-                                <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to={`/addorder/${customerId}/8`}>Book Repair</Link>
+                                <div><span>id=8</span><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
+                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
                                 {/* <Link to="/add-repaireeee/1" className="btn btn-primary mb-2">Add Repair</Link> */}
                             </div>
                         </div>
