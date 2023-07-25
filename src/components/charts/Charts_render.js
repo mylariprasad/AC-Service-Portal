@@ -11,15 +11,15 @@ const Charts_render = () => {
     <div className="App">
       <h1>Charts</h1>
       <div id="charts-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", width: "60%" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", width: "55%" }}>
           <RepairVolumeChart />
           <EmployeeProductivityChart />
         </div>
-        <div >
+        <div style={{ marginTop: "20px" }}>
           <CustomerSatisfactionChart />
         </div>
       </div>
-      <div style={{ display: "flex", justifyContent: "center", marginBottom: "15px" }}>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}>
         <ExportToPDFButton containerId="charts-container" />
       </div>
     </div>
