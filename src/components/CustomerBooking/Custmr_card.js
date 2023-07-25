@@ -51,7 +51,8 @@ function Custmr_card() {
                             <img src={AC1}  className="card-img-top" alt="AC device" />
                             <div className="card-body">
                                 <h4 class="a-text-normal">Lloyd 1.5 Ton 3 Star Inverter Split AC (5 in 1 Convertible, Copper,2.5 Filter, 2023 Model)</h4>
-                                <div><span>id=8</span><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
+                                <h5>Device ID =1</h5>
+                                <div><span></span><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
                                 <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
                                 {/* <Link to="/add-repaireeee/1" className="btn btn-primary mb-2">Add Repair</Link> */}
                             </div>
@@ -62,8 +63,9 @@ function Custmr_card() {
                             <img src={Samsung}  className="card-img-top" alt="AC device"/>
                             <div className="card-body">
                                 <h4 class="a-text-normal">Samsung 1.5 Ton 3 Star Inverter Split AC (Copper, Convertible 5-in-1 Cooling Mode, Easy Filter Plus)</h4>
+                                <h5>Device ID =2</h5>
                                 <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                <a className="btn btn-sn btn-dark" style={{ backgroundColor: 'navy', color: 'white' }}>Book Repair</a>
+                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
                             </div>
                         </div>
                     </div>
@@ -72,8 +74,9 @@ function Custmr_card() {
                             <img src={LG} className="card-img-top" alt="AC device"/>
                             <div className="card-body" >
                                 <h4 class="a-text-normal">LG 1.5 Ton 5 Star Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter 2023 Model)</h4>
+                                <h5>Device ID =3</h5>
                                 <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>                                  
-                                <a className="btn btn-sn btn-dark" style={{ backgroundColor: 'navy', color: 'white' }}>Book Repair</a>
+                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
                             </div>
                         </div>
                     </div>
@@ -82,8 +85,9 @@ function Custmr_card() {
                             <img src={Panasonic} className="card-img-top" alt="AC device"/>
                             <div className="card-body">
                                 <h4 class="a-text-normal">Panasonic 1.5 Ton 5 Star Inverter Split AC (Copper Condenser, 7 in 1 Convertible with AI Mode)</h4>                           
+                                <h5>Device ID =4</h5>
                                  <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                <a className="btn btn-sn btn-dark" style={{ backgroundColor: 'navy', color: 'white' }}>Book Repair</a>
+                                 <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
                             </div>
                         </div>
                     </div>
@@ -92,8 +96,9 @@ function Custmr_card() {
                             <img src="cc" className="card-img-top" alt="AC device"  />
                             <div className="card-body">
                                 <h4 class="a-text-normal">Panasonic 1.5 Ton 5 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with AI Mode)</h4>                           
+                                <h5>Device ID =5</h5>
                                  <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                <a className="btn btn-sn btn-dark" style={{ backgroundColor: 'navy', color: 'white' }}>Book Repair</a>
+                                 <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
                             </div>
                         </div>
                     </div>

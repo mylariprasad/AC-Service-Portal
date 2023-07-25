@@ -1,7 +1,7 @@
 import {  useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-
+import { Link } from 'react-router-dom'
 
 function Login() {
    
@@ -94,6 +94,8 @@ function Login() {
             />
           </div>
                   <button type="submit" class="btn btn-primary" onClick={login} >Login</button>
+                  <hr/>
+                  <Link to ="/register" className="btn btn-primary mb-2">Register</Link>
               </form>
 
             </div>
