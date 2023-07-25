@@ -33,18 +33,24 @@ const ListCustomerComponent = () => {
     
      const [filterdata, setFilterdata]= useState([]);
      const [query, setQuery] = useState('');
-    
+     const [selectedSearchCriteria, setSelectedSearchCriteria] = useState('name');
       const handlesearch=(event)=>{
         const getSearch= event.target.value; 
         if(getSearch.length > 0)
         {     
-         const searchdata= customers.filter( (item)=> item.name.toLowerCase().includes(getSearch));
+          const searchdata= filterdata.filter( (item)=> item[selectedSearchCriteria].toLowerCase().includes(getSearch));
          setCustomers(searchdata);
         } else {
           setCustomers(filterdata);
         }
         setQuery(getSearch);
       }
+
+      const handleSearchCriteriaChange = (event) => {
+        setSelectedSearchCriteria(event.target.value);
+        setQuery('');
+        setCustomers(filterdata);
+      };
   return (
     <div className='container'>
       <h2 className="text-center">Customer Management</h2>
@@ -57,15 +63,26 @@ const ListCustomerComponent = () => {
             type="text"
             name="name"
             value={query}
-            style={{ width: '1000px', height: '40px', fontSize: '14px' }} 
+            style={{ width: '500px', height: '40px', fontSize: '14px', marginRight:"300px" }}
             onChange={handlesearch}
             placeholder="Search..."
           />
           <div className="input-group-append">
-            <button className="btn btn-info" onClick={getAllCustomers}>
-              Search
-            </button>
+            <button className="btn btn-info btn-dark">
+              SearchBy:
+            </button> 
           </div>
+          <select
+              className='form-control'
+              style={{ width: '150px', height: '40px', fontSize: '14px', marginLeft:"20px"}}
+              value={selectedSearchCriteria}
+              onChange={handleSearchCriteriaChange}
+            >
+              <option value='name'>Name</option>
+              <option value='email'>Email Id</option>
+              <option value='phone_no'>Phone Number</option>
+              
+            </select>
         </div>
       </div>
           

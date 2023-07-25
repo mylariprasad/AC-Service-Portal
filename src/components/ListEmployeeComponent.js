@@ -66,7 +66,7 @@ const ListEmployeeComponent = () => {
             placeholder="Search..."
           />
           <div className="input-group-append">
-            <button className="btn btn-info btn-dark" onClick={getAllEmployees}>
+            <button className="btn btn-info btn-dark">
               SearchBy:
             </button> 
           </div>

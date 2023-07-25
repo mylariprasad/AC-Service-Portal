@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../css/Carousel.css';
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
-
+import Sidebar from './Sidebar.js';
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,6 +18,7 @@ const Carousel = ({ images }) => {
   return (
     <>
      <HeaderComponent/>
+     <Sidebar />
         <div className="carousel my-5">
           <button className="carousel__button" onClick={handlePrevious}>
             &lt;

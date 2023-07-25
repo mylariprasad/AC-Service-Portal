@@ -79,6 +79,11 @@
   color: #0a0a83; /* Change the icon color to your desired color */
   font-size: 150px;
 }
+.icon2 {
+  margin: 10px;
+  color: #702806; /* Change the icon color to your desired color */
+  font-size: 70px;
+}
 .PC {
   width: 150px; /* Set the desired width for the image */
   height: 7px; /* Let the height adjust proportionally */
@@ -201,7 +206,7 @@ testimonial-content {
   text-align: center;
   margin-bottom: 30px;
   background-color: #cac5d6;
-  height: 150px;
+  height: 240px;
 }
 
 .feature i {

@@ -32,18 +32,24 @@ const ListDeviceComponent = () => {
     }
     const [filterdata, setFilterdata]= useState([]);
      const [query, setQuery] = useState('');
-     
+     const [selectedSearchCriteria, setSelectedSearchCriteria] = useState('brand');
       const handlesearch=(event)=>{
         const getSearch= event.target.value; 
         if(getSearch.length > 0)
         {     
-         const searchdata= devices.filter( (item)=> item.brand.toLowerCase().includes(getSearch));
+          const searchdata= filterdata.filter( (item)=> item[selectedSearchCriteria].toLowerCase().includes(getSearch));
          setDevices(searchdata);
         } else {
           setDevices(filterdata);
         }
         setQuery(getSearch);
       }
+
+      const handleSearchCriteriaChange = (event) => {
+        setSelectedSearchCriteria(event.target.value);
+        setQuery('');
+        setDevices(filterdata);
+      };
 
   return (
     <div className="container">
@@ -57,15 +63,26 @@ const ListDeviceComponent = () => {
             type="text"
             name="name"
             value={query}
-            style={{ width: '1000px', height: '40px', fontSize: '14px' }} 
+            style={{ width: '500px', height: '40px', fontSize: '14px', marginRight:"300px" }} 
             onChange={handlesearch}
             placeholder="Search..."
           />
           <div className="input-group-append">
-            <button className="btn btn-info" onClick={getAllDevices}>
-              Search
-            </button>
+            <button className="btn btn-info btn-dark">
+              SearchBy:
+            </button> 
           </div>
+          <select
+              className='form-control'
+              style={{ width: '150px', height: '40px', fontSize: '14px', marginLeft:"20px"}}
+              value={selectedSearchCriteria}
+              onChange={handleSearchCriteriaChange}
+            >
+              <option value='brand'>Brand</option>
+              <option value='type'>Type</option>
+              <option value='model'>Model</option>
+              
+            </select>
         </div>
       </div>
         </React.Fragment>

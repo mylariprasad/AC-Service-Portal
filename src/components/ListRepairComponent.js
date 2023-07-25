@@ -34,20 +34,23 @@ const ListRepairComponent = () => {
 
   const [filterData, setFilterData] = useState([]);
   const [query, setQuery] = useState('');
-
+  const [selectedSearchCriteria, setSelectedSearchCriteria] = useState('repName');
   const handleSearch = (event) => {
     const getSearch = event.target.value;
     if (getSearch.length > 0) {
-      const searchData = repairs.filter((item) =>
-        item.repName.toLowerCase().includes(getSearch)
-      );
-      setRepairs(searchData);
+      const searchdata= filterData.filter( (item)=> item[selectedSearchCriteria].toLowerCase().includes(getSearch));
+      setRepairs(searchdata);
     } else {
       setRepairs(filterData);
     }
     setQuery(getSearch);
   };
 
+  const handleSearchCriteriaChange = (event) => {
+    setSelectedSearchCriteria(event.target.value);
+    setQuery('');
+    setRepairs(filterData);
+  };
   return (
     <div className="container">
       <h2 className="text-center">Repair Management</h2>
@@ -61,15 +64,26 @@ const ListRepairComponent = () => {
             type="text"
             name="name"
             value={query}
-            style={{ width: '1000px', height: '40px', fontSize: '14px' }} 
+            style={{ width: '500px', height: '40px', fontSize: '14px', marginRight:"300px" }}
             onChange={handleSearch}
             placeholder="Search..."
           />
           <div className="input-group-append">
-            <button className="btn btn-info" onClick={getAllRepairs}>
-              Search
-            </button>
+            <button className="btn btn-info btn-dark">
+              SearchBy:
+            </button> 
           </div>
+          <select
+              className='form-control'
+              style={{ width: '150px', height: '40px', fontSize: '14px', marginLeft:"20px"}}
+              value={selectedSearchCriteria}
+              onChange={handleSearchCriteriaChange}
+            >
+              <option value='repName'>Repair Name</option>
+              <option value='des'>Description</option>
+              <option value='status'>status</option>
+              
+            </select>
         </div>
       </div>
           

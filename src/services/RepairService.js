@@ -18,8 +18,6 @@ class RepairService{
         return axios.delete(REPAIR_BASE_REST_API_URL+ '/' + repairId);
     }
 
-
-
 }
-// eslint-disable-next-line 
+
 export default new RepairService(); 

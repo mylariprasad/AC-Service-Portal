@@ -16,13 +16,16 @@ import ListDeviceComponent from './components/ListDeviceComponent';
 import AddDeviceComponent from './components/AddDeviceComponent';
 import Customer_bking_rendered from './components/CustomerBooking/Customer_bking_rendered';
 import ComplainForm from './components/CustomerBooking/ComplainForm';
-
+import AddOrderComponent from './components/AddOrderComponenet';
+import Login from './components/Login_register/Login'
+import Register from './components/Login_register/Register'
+import Admin_Login from './components/Login_register/Admin_Login'
 function App() {
   return (
    <div>
     <Router>
-    <HeaderComponent/>
-    <Sidebar></Sidebar>
+    {/* <HeaderComponent/> */}
+    {/* <Sidebar></Sidebar> */}
     <Routes>
        {/*<Route path="/" element={<Home/>}> </Route>*/}
       
@@ -41,8 +44,11 @@ function App() {
       <Route path = "/devices" element = {<ListDeviceComponent/>}></Route>
       <Route path = "/add-device" element = {<AddDeviceComponent/>} ></Route>
       <Route path="/edit-device/:id" element={<AddDeviceComponent/>}></Route>
-      <Route path="/Customer_bking_rendered" element={<Customer_bking_rendered/>}></Route>
+      <Route path="/Customer_bking_rendered/:id" element={<Customer_bking_rendered/>}></Route>
       <Route path="/ComplainForm" element={<ComplainForm/>}></Route>
+      <Route path="/register" element={<Register/>}></Route>
+      <Route path="/login" element={<Login/>}></Route>
+      <Route path="/Admin_login" element={<Admin_Login/>}></Route>
       </Routes>
     <FooterComponent/>
     </Router>
