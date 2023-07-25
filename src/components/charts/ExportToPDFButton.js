@@ -21,17 +21,17 @@ const ExportToPDFButton = ({ containerId }) => {
   const buttonContainerStyle = {
     display: "flex",
     justifyContent: "center",
-    marginTop: "10px",
+    marginTop: "20px",
   };
 
   const buttonStyle = {
     backgroundColor: "#0000FF",
     color: "white",
-    padding: "20px 30px",
+    padding: "10px 20px",
     border: "none",
     borderRadius: "20px",
     cursor: "pointer",
-    fontSize: "20px",
+    fontSize: "16px",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
     transition: "background-color 0.3s ease",
   };
@@ -39,7 +39,7 @@ const ExportToPDFButton = ({ containerId }) => {
   return (
     <div style={buttonContainerStyle}>
       <button onClick={handleExportPDF} style={buttonStyle}>
-        Export Charts/Reports to PDF
+        Export Charts to PDF
       </button>
     </div>
   );

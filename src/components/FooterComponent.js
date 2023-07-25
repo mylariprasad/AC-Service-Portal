@@ -16,7 +16,7 @@ const FooterComponent = () => {
 
   return (
     <div>
-      <div className={`container-fluid footer ${isExpanded ? 'expanded' : ''}`} onMouseEnter={handleFooterHover} onMouseLeave={handleFooterLeave}>
+      <div  id='Contact' className={`container-fluid footer ${isExpanded ? 'expanded' : ''}`} onMouseEnter={handleFooterHover} onMouseLeave={handleFooterLeave}>
         <div className='container-fluid ml-8 mr-8'>
           <div className='row ml-5'>
             <div className='col-12 col-md-4 col-xl-4 col-lg-4'>

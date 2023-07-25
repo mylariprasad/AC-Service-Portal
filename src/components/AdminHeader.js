@@ -1,13 +1,15 @@
 import React from 'react'
+import '../css/Adminheader.css';
 
-export default function NavBar() {
+
+const AdminHeader = () => {
   return (
     <div className='row top_header2'>
       <header>
         <nav className='navbar navbar-expand-md'>
-            <div style={{textAlign : 'left', height : '50px', width : '110%',paddingLeft: '30px',}}>
+            <div style={{textAlign : 'left', height : '50px', width : '110%',paddingLeft: '30px'}}>
             
-            <h1>  AC REPAIR :  CUSTOMER'S  DESK</h1>
+            <h1>  AC REPAIR :  SERVICE PROVIDER(ADMIN'S)  DESK</h1>
             </div>
             <div className='col-1 col-md-1 col-xl-1 col-lg-1'>
         <div className="container-Project-item" >
@@ -25,3 +27,5 @@ export default function NavBar() {
     </div>
   )
 }
+
+export default AdminHeader
