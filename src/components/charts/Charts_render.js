@@ -8,7 +8,7 @@ import "./Style.css"
 
 const Charts_render = () => {
   return (
-    <div className="App">
+    <div className="App1">
       <h1>Charts</h1>
       <div id="charts-container" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div style={{ display: "flex", justifyContent: "space-between", width: "55%" }}>

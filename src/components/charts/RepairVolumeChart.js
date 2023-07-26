@@ -18,7 +18,7 @@ const RepairVolumeChart = () => {
   ];
 
   return (
-    <div className="App">
+    <div className="App1">
       <h1>Repair Volume</h1>
       <PieChart width={500} height={500}>
         <Pie

@@ -11,7 +11,7 @@ const EmployeeProductivityChart = () => {
   ];
 
   return (
-    <div className="App">
+    <div className="App1">
       <h1>Employee Productivity</h1>
       <PieChart width={500} height={500}>
         <Pie
