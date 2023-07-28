@@ -4,11 +4,11 @@ import { ListGroup, ListGroupItem } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import AC1 from '../AC1.jpg'
-import LG from '../LG.jpg'
-import Panasonic from '../Panasonic.jpg'
-import Samsung from '../Samsung.jpg'
+
+
 import '../../css/Custmr_card.css'
+import MenuContent from './MenuContent'
+
 
 function Custmr_card() {
   const { id } = useParams();
@@ -32,80 +32,27 @@ function Custmr_card() {
   };
 
   return (
-    <div className="main-container" style={{width:"100vw", marginTop:"30px"}}>
-    <div className="card1" style={{ width: '20%', height: '90vh',backgroundColor: 'lightblue', borderColor: 'red', display:'inline-block', position: "sticky", top: "30px"}}>
+    <div className="main-container" style={{width:"100vw", marginTop:"0px"}}>
+    <div className="card1" style={{ width: '20%', height: '95vh',backgroundColor: 'lightblue', borderColor: 'red', display:'inline-block', position: "sticky", top: "30px"}}>
       <div className="container">
         <img style={{ height: '5vw', width: '5vw', display:"inline-block" }} src={img} alt="" />
       </div>
       <ListGroup>
-        <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Signed in :</ListGroupItem>
+      <h2>
+      <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Customer Profile Card:-</ListGroupItem>
+        <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Signed in as:</ListGroupItem>
         <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Customer Name: {customerName}</ListGroupItem>
         <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action>Customer ID: {customerId}</ListGroupItem>
         <ListGroupItem style={{ height: '4rem', backgroundColor: 'lightgrey' }} tag="a" action> <a className="menu-item " href="/">Logout</a></ListGroupItem>
+        </h2>
       </ListGroup>
+
     </div>
     <div className="container" style={{width:'80%',display:'inline-block',verticalAlign: "top"}}>
-                <div className="row" style={{display:"flex"}}>
-                    <div className="col-md-3 my-3">
-                        <div className="card">
-                            <img src={AC1}  className="card-img-top" alt="AC device" />
-                            <div className="card-body">
-                                <h4 class="a-text-normal">Lloyd 1.5 Ton 3 Star Inverter Split AC (5 in 1 Convertible, Copper,2.5 Filter, 2023 Model)</h4>
-                                <h5>Device ID =1</h5>
-                                <div><span></span><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
-                                {/* <Link to="/add-repaireeee/1" className="btn btn-primary mb-2">Add Repair</Link> */}
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3 my-3">
-                        <div className="card">
-                            <img src={Samsung}  className="card-img-top" alt="AC device"/>
-                            <div className="card-body">
-                                <h4 class="a-text-normal">Samsung 1.5 Ton 3 Star Inverter Split AC (Copper, Convertible 5-in-1 Cooling Mode, Easy Filter Plus)</h4>
-                                <h5>Device ID =2</h5>
-                                <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3 my-3" >
-                        <div className="card">
-                            <img src={LG} className="card-img-top" alt="AC device"/>
-                            <div className="card-body" >
-                                <h4 class="a-text-normal">LG 1.5 Ton 5 Star Inverter Split AC (Copper, Super Convertible 6-in-1 Cooling, HD Filter 2023 Model)</h4>
-                                <h5>Device ID =3</h5>
-                                <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>                                  
-                                <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3 my-3">
-                        <div className="card">
-                            <img src={Panasonic} className="card-img-top" alt="AC device"/>
-                            <div className="card-body">
-                                <h4 class="a-text-normal">Panasonic 1.5 Ton 5 Star Inverter Split AC (Copper Condenser, 7 in 1 Convertible with AI Mode)</h4>                           
-                                <h5>Device ID =4</h5>
-                                 <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                 <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3 my-3">
-                        <div className="card">
-                            <img src="cc" className="card-img-top" alt="AC device"  />
-                            <div className="card-body">
-                                <h4 class="a-text-normal">Panasonic 1.5 Ton 5 Star Wi-Fi Inverter Smart Split AC (Copper Condenser, 7 in 1 Convertible with AI Mode)</h4>                           
-                                <h5>Device ID =5</h5>
-                                 <div><span class="a-price-symbol">₹</span><span class="a-price-whole">999</span></div>
-                                 <Link className='btn btn-sn btn-dark' style={{ backgroundColor: 'navy', color: 'white' }} to="/add-repair">Book Repair</Link>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+    <MenuContent/>
     </div>
+    </div>
+    
   );
 }
 

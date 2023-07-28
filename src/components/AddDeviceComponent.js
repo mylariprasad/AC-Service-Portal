@@ -51,7 +51,7 @@ const AddDeviceComponent = () => {
       if(id){
           return <h2 className = "text-center">Update Device</h2>
       }else{
-          return <h2 className = "text-center">Add Device</h2>
+          return <h2 className = "text-center">Add / Register a new Device</h2>
       }
   }
   return (
@@ -104,7 +104,7 @@ const AddDeviceComponent = () => {
 
                                 </input></div>
                            <button className='btn btn-success' onClick={(e) => saveDevice(e)}>Submit</button>
-                           <Link to="/devices" className='btn btn-danger'>Cancel</Link>
+                           {/*<Link to="/devices" className='btn btn-danger'>Cancel</Link>*/}
 
                         </form>
                     </div>

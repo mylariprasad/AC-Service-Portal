@@ -11,7 +11,7 @@ export default function NavBar() {
             </div>
             <div className='col-1 col-md-1 col-xl-1 col-lg-1'>
         <div className="container-Project-item" >
-            <h3> Home</h3>
+            <h3> </h3>
         </div>
       </div>
       <div className='col-1 col-md-1 col-xl-1 col-lg-1'>

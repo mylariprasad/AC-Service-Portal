@@ -12,18 +12,6 @@ export default function Customer_bking_rendered() {
       <NavBar></NavBar>
       
       <Custmr_card ></Custmr_card>
-        {/* <Row>
-          <Col md={4}>
-            <div className="container">
-              <Custmr_card ></Custmr_card>
-            </div>
-          </Col>
-          <Col md={8}>
-          <MenuContent></MenuContent>
-          </Col> 
-        </Row> */}
-
-
     </div>
   )
 }
