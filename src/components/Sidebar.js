@@ -11,7 +11,13 @@ export default props => {
         Customer
       </Link>
 
+<<<<<<< Updated upstream
      
+=======
+      <Link className="menu-item" to="/employee-repairs">
+        Employee
+      </Link>
+>>>>>>> Stashed changes
 
       <Link className="menu-item" to={`/Admin_login`}>
         Service provider(Admin)
