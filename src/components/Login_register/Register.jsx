@@ -14,7 +14,7 @@ function Register() {
     async function save(event) {
         event.preventDefault();
         try {
-          await axios.post("http://localhost:8085/api/v1/employee/save", {
+          await axios.post("http://localhost:8080/api/v1/custmlogin/save", {
           employeename: employeename,
           email: email,
           password: password,
@@ -29,7 +29,7 @@ function Register() {
     return (
       <div className="App">
       <div className="auth-form-container">
-        <h1 className="heading">Registration</h1>
+        <h1 className="heading">Registration (2nd Step)</h1>
         <form className="registerform">
           <label>User Name</label>
           <input
@@ -73,7 +73,7 @@ function Register() {
           <button className="main-button" type="submit" onClick={save}>Submit</button>
         </form>
         <button className="Link-btn" onClick={()=>navigate('/login')}>
-          Already have an account? Login here
+          Already have an account? Now Login here
         </button>
       </div>
     </div>

@@ -14,7 +14,7 @@ function Login() {
     async function login(event) {
         event.preventDefault();
         try {
-          await axios.post("http://localhost:8085/api/v1/employee/login", {
+          await axios.post("http://localhost:8080/api/v1/custmlogin/login", {
             email: email,
             password: password,
             }).then((res) => 
@@ -74,7 +74,7 @@ function Login() {
   
             <button className="main-button" type="submit" onClick={login}>Login</button>
         </form>
-        <button className="Link-btn" onClick={()=>navigate('/register')}>Don't have account? Register here</button>
+        <button className="Link-btn" onClick={()=>navigate('/add-customer')}>Don't have account? Register here(2 step registration)</button>
       </div>
       </div>
     );

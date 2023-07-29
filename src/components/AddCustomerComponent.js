@@ -25,7 +25,7 @@ const AddCustomerComponent = () => {
          else{
          CustomerService.createCustomer(customer).then((response)=>{
             console.log(response.data);
-            navigate('/customers')
+            navigate('/register')
         }).catch(error=>{
             console.log(error)
            
@@ -49,7 +49,7 @@ const AddCustomerComponent = () => {
         if(id){
             return <h2 className = "text-center">Update customer</h2>
         }else{
-            return <h2 className = "text-center">Add customer</h2>
+            return <h2 className = "text-center">Add/Register customer (1st Step)</h2>
         }
     }
   return (
@@ -97,7 +97,7 @@ const AddCustomerComponent = () => {
                                     >
                                     </input>
                         </div>
-                       
+                       <h2> After you submit, you will be redirected for 2nd step registration </h2>
                         <button className='btn btn-success' onClick={(e)=>saveCustomer(e)}>Submit</button>
                         <Link to="/customers" className='btn btn-danger'>Cancel</Link>
                     </form>
