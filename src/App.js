@@ -21,15 +21,11 @@ import Login from "./components/Login_register/Login";
 import Admin_Login from "./components/Login_register/Admin_Login";
 import AboutUs from './components/AboutUs';
 import AddOrderComponent from './components/AddOrderComponent';
-<<<<<<< Updated upstream
 import ListDeviceComponent_2 from './components/ListDeviceComponent_2';
 import Customer_help from './components/CustomerBooking/Customer_help';
-
-
-=======
 import AssignRepairIdComponent from './components/AssignRepairIdComponent';
 import ListEmployeeRepair from './components/ListEmployeeRepair';
->>>>>>> Stashed changes
+
 function App() {
   return (
    <div>
@@ -60,14 +56,10 @@ function App() {
       <Route path="/login" element= { <Login/>} />
       <Route path="/Admin_login" element={<Admin_Login/>}></Route>
       <Route path="/addorder/:customerId/:deviceId" element={<AddOrderComponent/>}></Route>
-<<<<<<< Updated upstream
       <Route path = "/devices_2" element = {<ListDeviceComponent_2/>}></Route>
       <Route path = "/Customer_help" element = {<Customer_help/>}></Route>
-=======
       <Route  path="/assign-repair-id/:id" element={<AssignRepairIdComponent/>} />
       <Route path="/employee-repairs" element={<ListEmployeeRepair/>}/>
-      
->>>>>>> Stashed changes
     </Routes>
     
  
